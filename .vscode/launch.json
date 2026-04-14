@@ -2,13 +2,13 @@
   "configurations": [
     {
       "name": "Debug Extension",
+      "cwd": "${workspaceFolder}/apps/extension",
       "type": "node",
       "request": "launch",
       "runtimeArgs": ["run-script", "dev"],
       "runtimeExecutable": "pnpm",
       "skipFiles": ["<node_internals>/**", "${/**"],
       "console": "integratedTerminal",
-      "cwd": "${workspaceFolder}/apps/extension",
       "presentation": {
         "hidden": false,
         "group": "",
