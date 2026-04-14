@@ -1,41 +1,22 @@
 import { proxyServiceWorking, proxyServiceBroken } from "@/services";
-import { CreateLogger } from "@/util/logger";
+import { runExample } from "@/util/runExample";
 
 export default defineContentScript({
   matches: ["*://*.google.com/*"],
   async main() {
-    const services = proxyServiceBroken.createProxy();
-    const verificationService =
-      proxyServiceWorking.createProxy("verification");
-
     console.log("Hello content.");
 
     const example1 = async () => {
       // This will work
-      const log = CreateLogger("Example 1");
-      try {
-        log.info("execute");
-        await verificationService.verify();
-        log.info("success");
-      } catch (e) {
-        log.error("failed: %o", e);
-      } finally {
-        log.info("complete");
-      }
+      const verificationService =
+        proxyServiceWorking.createProxy("verification");
+      await runExample("Example 1", verificationService.verify);
     };
 
     const example2 = async () => {
       // This will not
-      const log = CreateLogger("Example 2");
-      try {
-        log.info("execute");
-        await services.verification.verify();
-        log.info("success");
-      } catch (e) {
-        log.error("failed: %o", e);
-      } finally {
-        log.info("complete");
-      }
+      const services = proxyServiceBroken.createProxy();
+      await runExample("Example 2", services.verification.verify);
     };
 
     await example1();
