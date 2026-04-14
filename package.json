@@ -4,8 +4,6 @@
   "version": "1.0.0",
   "description": "Demonstration of issue 131 in @aklinker1/webext-core",
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
     "watch": "tsc --watch --noEmit"
   },
   "repository": {
@@ -18,7 +16,6 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "prettier": "^3.8.2",
-    "tsdown": "^0.21.8",
     "typescript": "^6.0.2"
   }
 }
