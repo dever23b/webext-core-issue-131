@@ -51,14 +51,7 @@ class ProxyServiceWorking extends ProxyServiceBase {
 
     this.log.info("Registering service [%s]: %o", key, service);
 
-    return registerService(
-      key,
-      service,
-      this.generateConfig(
-        serviceKey,
-        (type) => type == `proxy-service.${serviceKey}`,
-      ),
-    );
+    return registerService(key, service);
   }
 }
 

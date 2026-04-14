@@ -15,9 +15,7 @@ class ProxyServiceBroken extends ProxyServiceBase {
   }
 
   public registerServices() {
-    void registerService("services", this.services, {
-      logger: this.log,
-    });
+    void registerService("services", this.services);
   }
 }
 
