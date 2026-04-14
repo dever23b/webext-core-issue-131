@@ -1,0 +1,7 @@
+{
+  "id": "firefox-devedition",
+  "version": "1.0.0",
+  "name": "Firefox Developer Edition",
+  "description": "Adds Mozilla Firefox Developer Edition",
+  "installsAfter": ["ghcr.io/devcontainers/features/common-utils"]
+}

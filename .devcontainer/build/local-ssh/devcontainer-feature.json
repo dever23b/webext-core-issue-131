@@ -1,0 +1,12 @@
+{
+  "id": "local-ssh",
+  "version": "1.0.0",
+  "name": "Mount local ssh config",
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}/.ssh",
+      "target": "/home/node/.ssh",
+      "type": "bind"
+    }
+  ]
+}

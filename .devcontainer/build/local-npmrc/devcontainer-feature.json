@@ -1,0 +1,12 @@
+{
+  "id": "local-npmrc",
+  "version": "1.0.0",
+  "name": "Mount local npmrc",
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}/.npmrc",
+      "target": "/home/node/.npmrc",
+      "type": "bind"
+    }
+  ]
+}

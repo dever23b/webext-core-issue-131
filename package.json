@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "webext-core-issue-131",
+  "version": "1.0.0",
+  "description": "Demonstration of issue 131 in @aklinker1/webext-core",
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "watch": "tsc --watch --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dever23b/webext-core-issue-131.git"
+  },
+  "author": "dever23b",
+  "license": "ISC",
+  "packageManager": "pnpm@10.31.0",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "prettier": "^3.8.2",
+    "tsdown": "^0.21.8",
+    "typescript": "^6.0.2"
+  }
+}
