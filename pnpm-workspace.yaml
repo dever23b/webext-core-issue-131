@@ -1,4 +1,7 @@
 packages:
   - "apps/*"
-  - "packages/*"
+  # - "packages/*"
 linkWorkspacePackages: true
+# overrides:
+#   "@webext-core/messaging": "link:./packages/webext-core/packages/messaging"
+#   "@webext-core/proxy-service": "link:./packages/webext-core/packages/proxy-service"
